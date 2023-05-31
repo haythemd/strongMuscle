@@ -8,21 +8,23 @@ import { Category } from '../models/product.model';
 })
 export class CategoryService {
 
-  apiUrl=""
+  apiUrl="http://localhost:8080/api/categories"
   constructor(private http : HttpClient) { }
+
 
 
   createCategory(category: Category): Observable<Category> {
     return this.http.post<Category>(this.apiUrl, category);
   }
-
-  getCategory(id: number): Observable<Category> {
-    const url = `${this.apiUrl}/${id}`;
-    return this.http.get<Category>(url);
-  }
-
   getCategories(): Observable<Category[]> {
     return this.http.get<Category[]>(this.apiUrl);
+  }
+ 
+
+ 
+
+  getCategory(id: number): Observable<Category> {
+    return this.http.get<Category>(`${this.apiUrl}/${id}`);
   }
 
   updateCategory(category: Category): Observable<Category> {
