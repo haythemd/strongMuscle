@@ -25,6 +25,14 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/About.css",
+              "src/assets/Blog-Template.css",
+              "src/assets/Contact.css",
+              "src/assets/Home.css",
+              "src/assets/nicepage.css",
+              "src/assets/Page-2.css",
+              "src/assets/Post-Template.css",
+              "src/assets/Product.css",
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
